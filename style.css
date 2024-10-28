@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary: #7f56d9;
+  --text-color: #667085;
+  --black: #101828;
+  --bg-secondary: #f9fafb;
+}
+
+.no-scroll-active {
+  overflow: hidden;
+}
+
+body {
+  overflow: "";
+}
+
+#container {
+  width: 100%;
+  max-width: 2000px;
+  max-height: 742px;
+  /* height: 100vh; */
+  height: 100svh;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (min-width: 320px) {
+  #container {
+    max-height: 100vh;
+  }
+  .primary-text {
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  .heading-text {
+    color: var(--black);
+    font-size: 1.9rem;
+  }
+
+  .body-text {
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  .nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+  }
+  .nav-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    z-index: 10;
+  }
+  .comapny-logo-wrapper {
+    width: 80%;
+    height: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+  }
+  .brand {
+    height: 100%;
+  }
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+  }
+  .brand-logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: #fff3;
+    background-image: linear-gradient(#0a0d1200, #0a0d1200 80%, #0a0d1233);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .palantir {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .logomark-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.5rem;
+  }
+  .brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .company-name {
+    width: 107px;
+    height: 32px;
+  }
+  .hamburger-menu {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .hamburger-menu .ham-icon {
+    font-size: 1.5rem;
+  }
+  .navigation-container {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  .nav-items ul {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-items ul li {
+    margin-bottom: 3rem;
+  }
+  .auth-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .login {
+    color: var(--text-color);
+    margin-bottom: 3rem;
+  }
+  .sign-up {
+    width: 120px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+  #about {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  .company-overview {
+    width: 100%;
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .project-detail-wrapper {
+    height: 700px;
+  }
+  .about-us,
+  .about-heading {
+    margin-bottom: 2rem;
+  }
+
+  .about-body-text {
+    text-align: center;
+  }
+  .company-achievements {
+    width: 100%;
+    height: 1200px;
+    background-color: var(--bg-secondary);
+    padding: 4rem 1rem;
+  }
+
+  .company-success,
+  .future-vision,
+  .achievements-summary {
+    margin-bottom: 1rem;
+  }
+
+  .future-vision {
+    font-size: 1.7rem;
+  }
+
+  .performance-metrics {
+    width: 100%;
+    height: 500px;
+    padding-top: 2rem;
+  }
+
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .metrics h1 {
+    font-size: 2.5rem;
+  }
+
+  .metrics p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .desk-img {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
+  }
+  .desk-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .active-nav-items {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .metrics {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 591px) {
+  .desk-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desk-img img {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .achievements-summary {
+    display: none;
+  }
+  .company-achievements {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+  .project-detail-wrapper {
+    order: 1;
+    width: 40%;
+    height: 60%;
+  }
+  .desk-img {
+    width: 60%;
+    height: 100%;
+    justify-content: start;
+    margin-top: 0;
+  }
+  .desk-img img {
+    width: 90%;
+    height: 70%;
+  }
+  .performance-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60%;
+  }
+  .metrics {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .metrics h1 {
+    font-size: 2rem;
+  }
+  .about-us {
+    font-size: 1rem;
+  }
+  .about-heading {
+    font-size: 2.3rem;
+  }
+  .about-body-text {
+    font-size: 1.4rem;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .nav-header {
+    width: 300px;
+    z-index: 10;
+  }
+  .comapny-logo-wrapper {
+    margin-left: 5rem;
+  }
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    padding-left: 300px;
+    padding-right: 5rem;
+    height: 100%;
+    flex: 1;
+  }
+  .nav-items {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .nav-items ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-top: 0;
+    cursor: pointer;
+  }
+
+  .nav-items ul li {
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    color: var(--text-color);
+  }
+
+  .nav-items ul li span {
+    margin-left: 0.5rem;
+  }
+
+  .auth-btn-wrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .login {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    color: var(--text-color);
+  }
+  .sign-up {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+
+  .company-achievements {
+    padding: 2rem 7rem;
+  }
+}
